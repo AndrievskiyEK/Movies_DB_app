@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список фильмов</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="icon" href="./resourses/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__title"> 
+                <h2 class="header__title-movieslist">СПИСОК ФИЛЬМОВ</h2>
+                <h2 class="header__title-year">2023</h2>
+            </div>            
+            <h3 class="header__watch">Посмотреть</h1>
+        </div>
+    </header>
+    <main>
+        <div class="movies__wrapper">
+            <div class="container">
+                <form class="movies__form">
+                    <input 
+                    id="moviesFormInput"
+                    class="movies__form__imput" 
+                    type="text"
+                    placeholder="Добавить фильм">
+                    <button class="movies__form-add-btn" id="movieAddButton" disabled="true">
+                        <img class src="./resourses/arrow.png" alt="->">
+                    </button>
+                </form> 
+                <div id="validationMessage" class="movies__validationMessage">
+                    Введите наименование фильма для добавления его в список
+                </div>               
+                <div class="movies">
+                    <ul class="movies__list" id="movieslist">
+                        <!-- <li class="movies__item movies__item-check JS-movie-item" data-action="done">
+                            <div class="movies__item-indication movies__item-indication-used">
+                            </div>
+                            <span class="movies__item-name">
+                                фильм 1
+                            </span>
+                            <button class="movies__item-close-btn" data-action="delete">
+                                <img src="./resourses/close.png" alt="x">
+                            </button>
+                        </li>        
+                        <li class="movies__item JS-movie-item" data-action="done">
+                            <div class="movies__item-indication movies__item-indication-used">
+                            </div>
+                            <span class="movies__item-name">
+                                фильм 2
+                            </span>
+                            <button class="movies__item-close-btn" data-action="delete">
+                                <img src="./resourses/close.png" alt="x">
+                            </button>
+                        </li>     disabled="true"--> 
+                    </ul>
+                </div>
+            </div>    
+        </div>
+    </main>   
+<!--     <script type="module" src="./JS/firebase.js"></script>
+    <script src="./JS/localStorage.js"></script>
+    <script src="./JS/view.js"></script> 
+    <script src="./JS/model.js"></script>
+    <script src="./JS/controller.js"></script> -->
+    <script type="module" src="./JS/index.js"></script> 
+</body>
+</html>

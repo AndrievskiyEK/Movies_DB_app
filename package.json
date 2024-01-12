@@ -1,0 +1,16 @@
+{
+  "name": "my-project",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --no-source-maps --dist-dir prod"
+  },
+  "devDependencies": {
+    "parcel": "latest",
+    "process": "^0.11.10",
+    "sharp": "^0.31.3"
+  },
+  "dependencies": {
+    "firebase": "^10.7.1"
+  }
+}
