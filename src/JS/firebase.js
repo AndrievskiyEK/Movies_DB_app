@@ -27,7 +27,7 @@ export async function addDataToFirestore(MovieName){
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
-  }
+  }  
 } 
 
 /* export async function addDataToFirestore(movieList){
@@ -55,7 +55,7 @@ export async function readDataToFirestore(){
         done: doc.data().done,
         data: doc.data().data
       })
-        /* console.log(`${doc.id} => ${doc.data().name}`); */
+      movieDB.sort((a, b) => a.data < b.data ? 1:-1);
     });     
     return movieDB;
 }

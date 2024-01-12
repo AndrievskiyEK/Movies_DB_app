@@ -41,9 +41,11 @@ export class Controller{
         this.LocalStorage.saveToLocalStorage(movieList);        
     }
 
-    handleViewAddNewMovie = (MovieName) => {
-        this.model.addMovie(MovieName);  
-        addDataToFirestore(MovieName);       
+    handleViewAddNewMovie = async (MovieName) => {        
+        addDataToFirestore(MovieName); 
+        const movieList = await readDataToFirestore();
+        console.log(movieList);        
+        this.model.getMovies(movieList);               
     }
 
     handleViewDeleteMovie = (id) =>{

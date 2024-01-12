@@ -1,4 +1,4 @@
-import {updateDataToFirestore} from './firebase'
+import {updateDataToFirestore, addDataToFirestore} from './firebase'
 
 export class Model {
     constructor ({onMovieChange}){
@@ -12,14 +12,16 @@ export class Model {
         this.onMovieChange(this.movieList);
     }
 
-    addMovie = (MovieName) => {
-        this.movieList.push({
-            id: Date.now(),
+    /* addMovie = (MovieName) => {
+        const movie = {
+            data: Date.now(),
             name: MovieName,
             done: false,
-        })
+        }
+        this.movieList.push(movie)        
         this.onMovieChange(this.movieList);
-    }
+        addDataToFirestore(movie);
+    } */
 
     deleteMovie = (id) => {        
         const index = this.movieList.findIndex( (movie) => movie.id === id);
